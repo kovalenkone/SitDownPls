@@ -1,0 +1,55 @@
+@media (max-width: 1024px) {
+  .contacts {
+    &__container {
+      grid-template-columns: repeat(9, 1fr);
+
+      &::after {
+        grid-column: span 5;
+      }
+    }
+
+    &__wrapper {
+      grid-column: span 4;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .contacts {
+    padding-top: 35px;
+    padding-bottom: 70px;
+
+    &__container {
+      grid-template-columns: repeat(6, 1fr);
+
+      &::after {
+        grid-column: span 2;
+        background-image: url("../images/contacts-bg-768.svg");
+      }
+    }
+
+    &__wrapper {
+      grid-column: span 4;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    &__container::after {
+      display: none;
+    }
+
+    &__wrapper {
+      grid-column: span 6;
+    }
+
+    &__subtitle {
+      margin-bottom: 11px;
+    }
+  }
+
+  .checkbox-input + label {
+    font-size: 12px;
+  }
+}

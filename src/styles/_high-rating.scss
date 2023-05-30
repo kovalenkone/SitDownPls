@@ -1,0 +1,48 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.high-rating {
+  padding-bottom: 70px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(420px, auto);
+    grid-auto-rows: minmax(420px, auto);
+    gap: $gutter;
+    margin-bottom: 32px;
+  }
+
+  &-card {
+    &__image {
+      max-width: 120%;
+      margin-bottom: 16px;
+    }
+  
+    &__name,
+    &__price {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn-more,
+  &__btn-hide {
+    padding: 22px 35px;
+    align-self: center;
+  }
+
+  &__card-additional {
+    display: none;
+  }
+}
+
+.card-hidden {
+  display: flex;
+  visibility: visible;
+}
+

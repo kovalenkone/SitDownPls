@@ -1,0 +1,11 @@
+@media (max-width: 1330px) {
+  .special {
+    &__swiper-slide:nth-child(2) .card {
+      background-image: none;
+    }
+  
+    &__swiper-slide:nth-child(5) .card {
+      background-image: none;
+    }
+  }
+}

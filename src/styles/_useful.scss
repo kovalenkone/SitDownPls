@@ -1,0 +1,42 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.useful {
+  &__container {
+    position: relative;
+  }
+
+  &__swiper-wrapper {
+    min-height: 676px;
+  }
+
+  &__swiper-slide {
+    height: auto;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 426px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    height: 100%;
+    background-color: $grey-light-color;
+  }
+
+  &__link {
+    margin-top: auto;
+    width: max-content;
+  }
+}
+

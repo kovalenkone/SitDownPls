@@ -1,0 +1,509 @@
+@import "_variables";
+@import "_mixin.scss";
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+  url("../fonts/OpenSansRegular.woff2"),
+  url("../fonts/OpenSansRegular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+  url("../fonts/OpenSansBold.woff2"),
+  url("../fonts/OpenSansBold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: local("Playfair Display"),
+  url("../fonts/playfairdisplay-bold-webfont.woff2"),
+  url("../fonts/playfairdisplay-bold-webfont.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+  
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+  
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  line-height: 19.2px;
+  color: $main-color;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: 26px;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.section-offset {
+  padding: 35px 0;
+}
+
+.descr {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32.68px;
+  font-weight: 400;
+}
+
+.btn-fill {
+  @include btn;
+  padding: 16px 32px;
+  background-color: $purple-color;
+  color: $white-color;
+
+  transition: background-color .2s ease-in-out, border .2s ease-in-out;
+}
+
+.btn-card {
+  @include btn;
+  align-self: flex-start;
+  padding: 16px 32px;
+  border: 2px solid $purple-color;
+  color: $purple-color;
+
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.arrow-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+
+  transition: background-color .2s ease-in-out;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid $grey-light-color;
+  background-color: $grey-light-color;
+
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+
+  &::placeholder {
+    color: $grey-color;
+
+    transition: color .2s ease-in-out;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+svg,
+svg path,
+svg circle {
+  transition: .2s ease-in-out;
+}
+
+.oxford {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 66px;
+  line-height: 72px;
+  font-weight: 900;
+  color: #D5B986;
+}
+
+// card
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  height: 100%;
+  background-color: $grey-light-color;
+  border-radius: 10px;
+}
+
+.card-image {
+  align-self: center;
+}
+
+.card-name {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 31.2px;
+  font-weight: 400;
+}
+
+.card-name-link {
+  transition: color .2s ease-in-out;
+}
+
+.card-number {
+  display: block;
+}
+
+.card-price {
+  line-height: 20.8px;
+  color: $price-color;
+}
+
+.card-rating {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  padding-left: 22px;
+  color: $orange-color;
+
+  background-image: url("../images/star.svg");
+  background-size: 15px 15px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+// choices 
+.choices {
+  margin: 0;
+  z-index: 50;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0;
+}
+
+.choices__inner {
+  background-color: transparent;
+  font-size: 16px;
+
+  transition-property: color, border-color, background-color;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__list--dropdown {
+  margin-top: 16px;
+  padding: 6px;
+  width: max-content;
+  z-index: -1;
+}
+
+.is-open .choices__list--dropdown {
+  border: 2px solid $grey-light-color;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding: 10px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: transparent;
+  color: $purple-color;
+
+  transition: color .2s ease-in-out;
+}
+
+.choices[data-type*=select-one]:after {
+  right: 0;
+  top: 40%;
+  border: 0;
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../images/select-arrow.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: transform .2s ease-in-out;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  top: 30%;
+  margin: 0;
+  transform: rotate(180deg);
+}
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+// swiper buttons
+.swiper {
+  position: static;
+}
+
+.swiper-wrapper {
+  box-sizing: border-box;
+  position: static;
+}
+
+.swiper-btns {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 15px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+@media (max-width: 1220px) {
+  .swiper-btns {
+    right: 36px;
+  }
+}
+
+@media (max-width: 970px) {
+  .swiper-btns {
+    right: 72px;
+  }
+}
+
+@media (max-width: 750px) {
+  .swiper-btns {
+    position: static;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+// checkbox
+.checkbox-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox-input + label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $grey-shade-color;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.checkbox-input + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $grey-color;
+  margin-right: 12px;
+
+  transition: border-color .2s ease-in-out, background-color .2s ease-in-out, background-image .2s ease-in-out;
+}
+
+.checkbox-input:checked + label::before {
+  border-color: $purple-color;
+  background-color: $purple-color;
+  background: url("../images/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: left 4px center;
+  background-color: $purple-color;
+}
+
+// form validate
+.label-error {
+  position: absolute;
+  top: -19px;
+  left: 18px;
+  font-size: 12px;
+  color: $error-color;
+}
+
+.field-error {
+  outline: 1px solid $error-color;
+  outline-offset: -1px;
+}
+
+.success-field {
+  outline: 1px solid green;
+  outline-offset: -1px;
+}
+
+// breadcrumbs
+.page-links {
+  margin-bottom: 32px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 3px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 14px;
+    color: $grey-color;
+
+    &::after {
+      content: "/";
+    }
+  }
+
+  &__link--active {
+    color: $purple-shade-color;
+
+    &::after{
+      display: none;
+    }
+  }
+}
+
+// tooltip 
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+
+  transition: .2s ease-in-out;
+}
+
+.tippy-box[data-theme~='tooltip-theme'] {
+  background-color: $main-color;
+  color: $white-color;
+  font-weight: 400;
+  width: 157px;
+  font-size: 9px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../images/tooltip-active.svg");
+  opacity: 0;
+
+  transition: .2s ease-in-out;
+}
+
+.tooltip:focus-visible {
+  outline: none;
+}
+
+.tooltip:hover .tooltip-icon,
+.tooltip:focus-visible .tooltip-icon,
+.tooltip[aria-describedby="tippy-1"] .tooltip-icon {
+  opacity: 0;
+}
+
+.tooltip:hover::after,
+.tooltip:focus-visible::after,
+.tooltip[aria-describedby="tippy-1"]::after {
+  opacity: 1;
+}
+
+.tooltip[aria-describedby="tippy-1"] {
+  opacity: 1;
+}
+
+@media (max-width: 1220px) {
+  .container {
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 970px) {
+  .container {
+    padding: 0 72px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

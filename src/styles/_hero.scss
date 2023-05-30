@@ -1,0 +1,67 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.hero {
+  &__swiper {
+    position: relative;
+  }
+
+  &__swiper-wrapper {
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+
+  &__swiper-slide {
+    @include bg-image;
+  }
+
+  &__swiper-slide--1 {
+    background-image: url("../images/banner.webp");
+  }
+
+  &__swiper-slide--2 {
+    background-image: url("../images/banner-2.webp");
+  }
+
+  &__swiper-slide--3 {
+    background-image: url("../images/banner-3.webp");
+
+    & .hero__title {
+      color: $white-color;
+      max-width: 587px;
+    }
+  }
+
+  &__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 49px;
+    max-width: 496px;
+    font-size: 48px;
+    line-height: 65.37px;
+    color: $grey-color;
+  }
+
+  &__btn {
+    padding: 22px 50px;
+  }
+
+  &__btn--mobile {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  margin: 8px !important;
+  width: 14px;
+  height: 14px;
+  background-color: $main-color;
+  opacity: .3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}

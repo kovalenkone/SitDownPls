@@ -1,0 +1,68 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.contacts {
+  padding-top: 15px;
+  padding-bottom: 90px;
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__subtitle {
+    margin-bottom: 14px;
+    max-width: 624px;
+    font-size: 14px;
+    line-height: 19.7px;
+    font-weight: 400;   
+    color: #666666;  
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $gutter;
+
+    &::after {
+      content: "";
+      background-image: url("../images/contacts-bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__input-wrapper {
+    margin-bottom: 30px;
+    height: 54px;
+  }
+
+  &__input {
+    padding: 5px 16px;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  &__btn {
+    padding: 19px 35px;
+    margin-bottom: 11px;  
+  }
+
+  &__link {
+    padding-left: 3px;
+    text-decoration: underline;
+    color: $purple-color;
+
+    transition: color .2s ease-in-out;
+  }
+
+  &__checkbox-input + label::before {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+  }
+
+  &__checkbox-input:checked + label::before { 
+    background-position: left 1px center;
+  }
+}

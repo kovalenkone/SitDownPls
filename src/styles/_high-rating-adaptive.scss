@@ -1,0 +1,61 @@
+@media (max-width: 1250px) {
+  .high-rating {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .high-rating {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .high-rating {
+    &__list {
+      grid-template-rows: 278px 278px 278px;
+      grid-auto-rows: 278px;
+      gap: $gutter-mobile;
+    }
+
+    &__card {
+      padding: 16px;
+    }
+
+    &-card {
+      &__image {
+        width: 108px;
+        margin-bottom: 16px;
+      }
+  
+      &__name {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 20.8px;
+      }
+  
+      &__price {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 20.8px;
+      }
+  
+      &__btn {
+        padding: 10px 22px;
+        width: 100%;
+      }
+  
+      &__rating {
+        left: 16px;
+        top: 16px;
+        padding-left: 19px;
+        background-size: 13px 12px;
+        font-size: 12px;
+      }
+    }
+  }
+}

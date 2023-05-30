@@ -1,0 +1,68 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.banner {
+  @include bg-image;
+  background-image: url("../images/banner-4.webp");
+
+  &__container {
+    padding-top: 155px;
+    padding-bottom: 150px;
+  }
+
+  &__title {
+    margin-bottom: 49px;
+    max-width: 508px;
+    font-size: 48px;
+    line-height: 57.6px;
+    font-weight: 400;
+    color: $white-color;
+  }
+
+  &__btn {
+    padding: 22px 31.5px;
+  }
+}
+
+@media (max-width: 970px) {
+  .banner {
+    background-image: url("../images/banner-4-1024.webp");
+
+    &__container {
+      padding-left: 36px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    position: relative;
+    background-image: url("../images/banner-4-320.webp");
+
+    &__container {
+      padding-left: 12px;
+      padding-top: 30px;
+      padding-bottom: 110px;
+    }
+
+    &__title {
+      margin: 0;
+      max-width: 187px;
+      font-size: 16px;
+      line-height: 120%;
+    }
+
+    .oxford {
+      font-size: 27px;
+      line-height: 120%;
+    }
+
+    &__btn {
+      position: absolute;
+      left: 12px;
+      bottom: -92px;
+      width: calc(100% - 24px);
+    }
+  }
+
+}

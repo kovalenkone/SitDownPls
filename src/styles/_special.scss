@@ -1,0 +1,83 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.special {
+  padding-top: 70px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__swiper-wrapper {
+    box-sizing: border-box;
+    min-height: 510px;
+  }
+
+  &__swiper-slide {
+    width: 296px;
+    min-height: 510px;
+    height: auto;
+
+    &--big {
+      width: 624px;
+    }
+
+    &:nth-child(2) .card {
+      background-image: url("../images/bg-sofa-1.png");
+      background-repeat: no-repeat;
+      background-position: bottom 30px right 30px;
+    }
+  
+    &:nth-child(5) .card{
+      background-image: url("../images/bg-sofa-2.png");
+      background-repeat: no-repeat;
+      background-position: bottom 30px right 30px;
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left: 0;
+    width: 92px;
+    height: 34px;
+    color: $white-color;
+    padding: 7px 10px 0 0;
+  
+    font-size: 14px;
+    line-height: 19.07px;
+    font-weight: 700;
+
+    background-image: url("../images/bg-orange.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &-card {
+    &__image {
+      margin-bottom: 16px;
+    }
+
+    &__price {
+      margin-bottom: 25px;
+    }
+
+    &__current-price {
+      font-size: 18px;
+      margin-right: 27px;
+      color: $orange-color;
+    }
+
+    &__old-price {
+      color: $grey-color;
+      text-decoration-line: line-through;
+    }
+
+    &__btn {
+      align-self: flex-start;
+    }
+  }
+}
+

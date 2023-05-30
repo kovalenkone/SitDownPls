@@ -1,0 +1,80 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.footer {
+  &__top {
+    background-color: #EAEAEA;
+  }
+
+  &-top__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 31px;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .2s ease-in-out;
+  }
+
+  &__social-icon {
+    fill: $grey-color;
+  }
+
+  &__nav {
+    display: flex;
+
+    & .footer__col:not(:last-child) {
+      margin-right: 134px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 2px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 14px;
+    color: $grey-color;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  &__copyt {
+    align-self: center;
+    margin: 0;
+    font-size: 14px;
+    line-height: 19px;
+    color: $grey-color;
+  }
+
+  &__copyt > span {
+    margin-left: 7px;
+  }
+}

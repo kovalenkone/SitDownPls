@@ -1,0 +1,130 @@
+@media (max-width: 1024px) {
+  .top {
+    &__list {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: 511px 511px;
+    }
+
+    &__item:nth-child(1) {
+      grid-column: span 6;
+      order: 1;
+    }
+
+    &__item,
+    &__item:nth-child(2) {
+      grid-column: span 3;
+    }
+
+    &__item:nth-child(2) {
+      order: 4;
+    }
+
+    &__item:nth-child(3) {
+      order: 2;
+    }
+
+    &__item:nth-child(4) {
+      order: 3;
+    }
+
+    &__item:nth-child(5) {
+      order: 5;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .top {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 511px 511px 511px;
+    }
+
+    &__image {
+      top: 126px;
+    }
+
+    &__item {
+      grid-column: span 3;
+    }
+
+    &__item:nth-child(1) {
+      grid-column: span 6;
+    }
+
+    &__item:nth-child(2) {
+      order: 3;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    padding-top: 162px;
+
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 332px 206px 206px;
+      grid-column-gap: $gutter-mobile;
+    }
+    
+    &-card {
+      &__item {
+        margin-right: 20px;
+      }
+
+      &__btn-mobile {
+        display: block;
+        align-self: flex-end;
+        margin-left: 5px;
+      }
+
+      &__image {
+        top: auto;
+        bottom: 16px;
+      }
+
+      &:not(:first-child) &__name {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &__name {
+        margin: 0;
+      }
+
+      &__links {
+        display: flex;
+        align-items: center;
+      }
+
+      &__btns {
+        display: none;
+      }
+
+      &:nth-child(4) {
+        order: 4;
+      }
+
+      &:not(:first-child) {
+        padding: 16px;
+      }
+
+      &:not(:first-child) &__list{
+        flex-direction: column;
+        margin-bottom: 4px;
+      }
+
+      &:not(:first-child) &__category{
+        font-size: 10px;
+        line-height: 10px;
+      }
+
+      &:not(:first-child) &__item{
+        margin: 0;
+      }
+
+
+    }
+  }
+}

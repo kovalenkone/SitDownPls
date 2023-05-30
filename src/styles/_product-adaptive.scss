@@ -1,0 +1,162 @@
+@import "_variables";
+
+@media (max-width: 1220px) {
+  .header__bottom {
+    margin-bottom: 3px;
+  }
+
+  .page-links {
+    margin-bottom: 30px;
+  }
+
+  .product {
+    margin-bottom: 67px;
+
+    &-content__bottom {
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    &__mechanism {
+      grid-column: span 5;
+    }
+
+    &__chatacteristics {
+      grid-column: span 4;
+    }
+
+    &-preview__swiper {
+      padding: 10px 0 10px 10px;
+    }
+  }
+}
+
+
+@media (max-width: 970px) {
+  .product {
+    margin-bottom: 30px;
+
+    &-content__top {
+      grid-template-columns: repeat(3,minmax(187px,251px));
+      grid-template-areas:
+      "mainimage mainimage mainimage"
+      "preview info info";
+    }
+
+    &-preview__swiper {
+      padding: 25px;
+      height: 349px;
+    }
+
+    &-preview__swiper-wrapper {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-preview__swiper-slide {
+      height: 61px;
+    }
+    
+    &-content__bottom {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__mechanism {
+      grid-column: span 5;
+    }
+
+    &-mechanism__list {
+      margin-top: 32px;
+    }
+
+    &__chatacteristics {
+      grid-column: span 6;
+    }
+
+    &__list {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .page-links {
+    display: none;
+  }
+
+  .product {
+    margin-bottom: 67px;
+
+    &-content__top {
+      grid-template-columns: 100%;
+      grid-template-areas:
+      "mainimage"
+      "preview"
+      "info";
+    }
+
+    &-preview__swiper {
+      padding: 10px;
+      height: 81px;
+    }
+
+    &__info {
+      align-self: flex-start;
+      padding: 0;
+    }
+
+    &__name {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 20.8px;
+    }
+
+    &__subtitle {
+      margin-bottom: 16px;
+    }
+
+    &__price {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 130%;    
+    }
+
+    &__btns {
+      width: auto;
+    }
+
+    &__btn-buy {
+      width: 100%;
+    }
+
+    &-content__bottom {
+      grid-template-columns: 1fr;
+    }
+
+    &__mechanism,
+    &__chatacteristics {
+      grid-column: span 1;
+    }
+
+    &-mechanism__descr {
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    &__value-one::after {
+      display: none;
+    }
+
+    &__value-one {
+      height: auto;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}

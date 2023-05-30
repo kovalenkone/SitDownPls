@@ -1,0 +1,160 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.header__bottom {
+  padding: 0;
+}
+
+.cooperation {
+  padding-bottom: 70px;
+  padding-top: 19px;
+
+  &__wrapper {
+    max-width: 842px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 32.68px;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 28.8px;
+    color: $grey-shade-color;
+  }
+
+  &__block {
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+  }
+
+  &-profit__item {
+    padding-left: 37px;
+    max-width: 624px;
+
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+
+  &-profit__descr {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &-profit__item:nth-child(1) { 
+    background-image: url("../images/network.svg");
+  }
+
+  &-profit__item:nth-child(2) { 
+    background-image: url("../images/briefcase.svg");
+  }
+
+  &-profit__item:nth-child(3) { 
+    background-image: url("../images/git-pull-request.svg");
+  }
+
+  &-advantage__title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 21.79px;
+    font-weight: 600;
+    color: $orange-color;
+  }
+
+  &-guarantees__item {
+    display: flex;
+  }
+
+  &-guarantees__number {
+    margin-right: 12px;
+    line-height: 28.8px;
+    color: $orange-color;
+  }
+
+  &__period {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 624px;
+  }
+
+  &-period__text {
+    max-width: 515px;
+    font-size: 24px;
+    line-height: 36px;  
+  }
+
+  &__period::before {
+    content: "";
+    display: block;
+    width: 77px;
+    height: 116px;
+
+    background: url("../images/pencil.svg") no-repeat center;
+  }
+}
+
+@media (max-width: 1220px) {
+  .header__bottom {
+    margin: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .page-links {
+    display: none;
+  }
+
+  .cooperation {
+    padding-top: 0;
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 21.79px;
+    }
+
+    &__descr {
+      font-size: 14px;
+      line-height: 25.2px;
+    }
+
+    &-profit__descr {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &-advantage__subtitle {
+      font-size: 14px;
+      line-height: 19.7px;
+    }
+
+    &__period {
+      width: 100%;
+    }
+
+    &__period::before {
+      width: 36px;
+      height: 54px;
+      background: url("../images/pencil-mob.svg") no-repeat center;
+    }
+
+    &-period__text {
+      max-width: 242px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+  }
+}

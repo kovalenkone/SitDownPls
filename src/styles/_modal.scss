@@ -1,0 +1,261 @@
+@import "_variables";
+
+.graph-modal__close {
+  background-image: url("../images/modal-close.svg");
+  right: 20px;
+  top: 20px;
+}
+
+.one-click {
+  max-width: 624px;
+  width: 100%;
+  padding: 30px;
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 30px;
+    max-width: 374px;
+    font-size: 14px;
+    line-height: 19.07px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    height: 54px;
+  }
+
+  &__input {
+    padding: 7px 18px;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  &__btn {
+    margin-bottom: 12px;
+
+    align-self: flex-start;
+  }
+
+  &__link {
+    padding-left: 3px;
+    text-decoration: underline;
+    color: $purple-color;
+
+    transition: color .2s ease-in-out;
+  }
+
+  &__checkbox-input + label::before {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+  }
+
+  &__checkbox-input:checked + label::before { 
+    background-position: left 1px center;
+  }
+}
+
+.view {
+  padding: 0 15px;
+  max-width: 1310px;
+  width: 100%;
+  background-color: transparent;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    background-color: $white-color;
+  }
+
+  &__graph-modal__close {
+    right: 35px;
+  }
+
+  &__swiper {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  &__swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-preview__swiper {
+    position: relative;
+    padding: 20px 50px;
+    width: 100%;
+    background-color: $grey-light-color;
+  }
+
+  &-preview__swiper-slide {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    cursor: pointer;
+  }
+
+  &__swiper-btn {
+    position: absolute;
+    margin: 0;
+    top: 45%;
+
+    visibility: hidden;
+  }
+
+  &__button-prev {
+    left: 16px;
+    transform: rotate(180deg);
+  }
+
+  &__button-next {
+    right: 16px;
+    left: auto;
+  }
+}
+
+.thanks {
+  width: 624px;
+  height: 421px;
+  background-color: $white-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__image {
+    margin-bottom: 32px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .view {
+    padding: 0 36px;
+
+    &__graph-modal__close {
+      right: 56px;
+    }
+
+    &__swiper,
+    &-preview__swiper {
+      padding-right: 66px;
+      padding-left: 66px;
+    }
+
+    &__swiper-btn {
+      visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .view {
+    padding: 0 75px;
+
+    &__graph-modal__close {
+      right: 95px;
+    }
+
+    &__swiper {
+      padding: 0 21px;
+    }
+
+    &-preview__swiper {
+      padding-right: 79px;
+      padding-left: 79px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .graph-modal__close {
+    top: 16px;
+    width: 12px;
+    height: 12px;
+    background-size: cover;
+  }
+
+  .view {
+    padding: 0 12px;
+
+    &__graph-modal__close {
+      right: 28px;
+    }    
+
+    &__content {
+      padding-top: 32px;
+    }
+
+    &__swiper {
+      padding: 0 16px;
+      margin-bottom: 32px;
+    }
+
+    &-preview__swiper {
+      padding: 16px 62px;
+    }
+
+    &-preview__swiper-slide {
+      height: 86px;
+    }
+
+    &-preview__image {
+      height: 100%;
+    }
+  }
+
+  .one-click {
+    padding: 30px 16px;
+    max-width: 296px;
+
+    &__descr,
+    &__input-wrapper {
+      margin-bottom: 16px;
+    }
+  }
+
+  .thanks {
+    width: 296px;
+    height: 216px;
+
+    &__image {
+      margin-bottom: 14px;
+    }
+
+    &__descr {
+      max-width: 194px;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+
+  .checkbox-input + label {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,30 @@
+@import "_variables.scss";
+
+@mixin btn {
+  border-radius: 10px;
+  background-color: transparent;
+  border: 0;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+@mixin bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin focus-border {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid $purple-color;
+  border-radius: 10px;
+
+  opacity: 0;
+}

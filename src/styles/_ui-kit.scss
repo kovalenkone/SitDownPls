@@ -1,0 +1,325 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.btn-card {
+  &:focus-visible {
+    outline: 0;
+    background-color: $purple-light-color;
+    color: $white-color;
+  }
+
+  &:hover {
+    background-color: $purple-color;
+    color: $white-color;
+  }
+
+  &:active {
+    background-color: $purple-shade-color;
+    border-color: $purple-shade-color;
+    color: $white-color;
+  }
+}
+
+.btn-fill {
+  &:focus-visible {
+    outline: 0;
+    background-color: $purple-light-color;
+  }
+
+  &:focus-visible::before {
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: $purple-light-color;
+  }
+
+  &:active {
+    background-color: $purple-shade-color;
+    border-color: $purple-shade-color;
+  }
+}
+
+.arrow-btn {
+  &:focus-visible {
+    outline: 0;
+    background-color: $purple-light-color;
+  }
+
+  &:focus-visible .arrow-icon path {
+    stroke: $white-color;
+  }
+
+
+  &:hover {
+    background-color: $purple-color;
+  }
+
+  &:hover .arrow-icon path {
+    stroke: $white-color;
+  }
+
+  &:active {
+    background-color: $purple-shade-color;
+  }
+
+  &:active .arrow-icon path {
+    stroke: $white-color;
+  }
+
+  &:active .arrow-icon circle {
+    stroke: $purple-shade-color;
+  }
+}
+
+.card-name-link {
+  &:focus-visible,
+  &:hover {
+    outline: 0;
+    color: $purple-color;
+  }
+
+  &:active {
+    color: $purple-shade-color
+  }
+}
+
+.header__link,
+.footer__link,
+.top-card__category {
+  &:focus-visible {
+    outline: 0;
+    background-color: $pink-violet-color;
+    color: $purple-shade-color;
+  }
+
+  &:hover {
+    color: $purple-color;
+  }
+
+  &:active {
+    color: $purple-shade-color;
+  }
+}
+
+.header-menu__link {
+  &:focus-visible {
+    outline: 0;
+    background-color: $pink-violet-color;
+  }
+
+  &:hover {
+    color: $purple-color;
+  }
+
+  &:active {
+    color: $purple-shade-color;
+  }
+}
+
+.region-choices:focus-visible .region-choices__inner {
+  background-color: $pink-violet-color;
+}
+
+.region-choices__inner {
+  &:hover {
+    color: $purple-light-color;
+  }
+
+  &:active {
+    color: $purple-shade-color;
+  }
+}
+
+.header__tel {
+  &:focus-visible {
+    outline: 0;
+    background-color: $orange-focus-color;
+  }
+
+  &:hover {
+    color: $orange-light-color;
+  }
+
+  &:hover &-icon {
+    fill: $orange-light-color;
+  }
+
+  &:active {
+    color: $orange-shade-color;
+  }
+
+   &:active &-icon {
+    fill: $orange-shade-color;
+  }
+}
+
+.header__logo,
+.footer__logo {
+  &:focus-visible {
+    outline: 2px solid $purple-color;
+    outline-offset: 3px;
+  }
+}
+
+.header-user {
+  &__link:focus-visible {
+    outline: 0;
+    background-color: $purple-light-color;
+  }
+
+  &__link:focus-visible &__icon {
+    fill: $white-color;
+  }
+
+  &__link:hover &__icon {
+    fill: $purple-light-color;
+  }
+
+  &__link:active &__icon {
+    fill: $purple-shade-color;
+  }
+}
+
+.input {
+  &:focus-visible {
+    outline: 0;
+    background-color: $pink-light-color;
+    border-color: $purple-color;
+  }
+
+  &:hover {
+    background-color: $grey-hover-color;
+    border-color: $grey-hover-color;
+  }
+
+  &:active::placeholder {
+    color: $main-color;
+  }
+}
+
+.category-choices:focus-visible:not(.is-open) .category-choices__inner {
+  background-color: $pink-light-color;
+  border-color: $purple-color;
+}
+
+.category-choices__inner {
+  &:hover {
+    border-color: $purple-light-color;
+  }
+
+  &:active {
+    border-color: $purple-shade-color;
+  }
+}
+
+.checkbox-input:focus-visible:not(:checked) + label::before {
+  background-color: $purple-light-color;
+}
+
+.contacts__link {
+  &:focus-visible,
+  &:hover {
+    outline: 0;
+    color: $purple-light-color;
+  }
+
+  &:active {
+    color: $purple-shade-color
+  }
+}
+
+.top-card,
+.catalog-oxford {
+  &__link:focus-visible {
+    outline: 0;
+  }
+
+  &__link:focus-visible::after,
+  &__link:hover::after {
+    opacity: 1;
+  }
+
+  &__link:focus-visible + &__btn {
+    background-color: $purple-light-color;
+  }
+
+  &__link:focus-visible + &__btn &__arrow path,
+  &__link:hover + &__btn &__arrow path,
+  &__link:active + &__btn &__arrow path {
+    stroke: $white-color;
+  }
+
+  &__link:hover + &__btn {
+    background-color: $purple-color;
+  }
+
+  &__link:active + &__btn {
+    background-color: $purple-shade-color;
+  }
+
+  &__link:active + &__btn &__arrow circle {
+    stroke: $purple-shade-color;
+  }
+
+  &__link:active::after {
+    opacity: 1;
+    background-color: $purple-shade-color;
+  }
+
+  &__link:active {
+    color: $purple-shade-color;
+  }
+}
+
+.footer__social-link {
+  &:focus-visible {
+    outline: 0;
+    background-color: $purple-light-color;
+  }
+
+  &:focus-visible .footer__social-icon {
+    fill: $white-color;
+  }
+
+  &:hover .footer__social-icon {
+    fill: $purple-color;
+  }
+
+  &:active .footer__social-icon {
+    fill: $purple-shade-color;
+  }
+}
+
+.catalog__swiper-pagination .swiper-pagination-bullet:focus-visible {
+  background-color: $purple-light-color;
+  outline: 0;
+  color: $white-color;
+}
+
+.catalog__swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: $purple-color;
+  color: $white-color;
+}
+
+.catalog__swiper-pagination .swiper-pagination-bullet:active {
+  background-color: $purple-shade-color;
+  border-color: $purple-shade-color;
+  color: $white-color;
+}
+
+.catalog-range__field {
+  &:focus-visible {
+    outline: 0;
+    background-color: $pink-violet-color;
+    border-color: $purple-color;
+  }
+
+  &:hover {
+    border-color: $purple-color;
+  }
+
+  &:active {
+    border-color: $purple-shade-color;
+  }
+}

@@ -1,0 +1,166 @@
+@import "_variables";
+@import "_mixin.scss";
+
+.header__bottom {
+  padding-bottom: 16px;
+}
+
+.product {
+  margin-bottom: 78px;
+
+  &-content {
+    &__top {
+      display: grid;
+      grid-template-columns: 48.7% 48.6%;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "mainimage info"
+        "preview info";
+      gap: 16px 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__main-image {
+    grid-area: mainimage;
+  }
+
+  &__swiper {
+    cursor: pointer;
+  }
+
+  &__preview {
+    grid-area: preview;
+  }
+
+  &-preview__swiper {
+    padding: 10px 25px;
+    height: 81px;
+    background-color: $grey-light-color;
+  }
+
+  &__swiper-slide {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+  }
+
+  &-preview__swiper-slide {
+    width: max-content;
+    cursor: pointer;
+  }
+
+  &__info {
+    grid-area: info;
+    padding-top: 16px;
+  }
+
+  &__rating {
+    position: static;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 34.2px;
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 14px;
+    color: $grey-color;
+  }
+
+  &__price {
+    margin-bottom: 21px;
+    font-size: 36px;
+    line-height: 46.8px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+  }
+
+  &__btn-buy {
+    margin-bottom: 12px;
+    padding: 20px 32px;
+  }
+
+  &__btn-add {
+    color: $purple-color
+  }
+
+  &-content__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: $gutter;
+  }
+
+  &-mechanism {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 600;
+    }
+
+    &__descr {
+      margin: 0;
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 25.2px;
+    }
+
+    &__list {
+      margin-top: auto;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 544px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__value-one {
+    display: flex;
+    width: 100%;
+    height: 25px;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 25.2px;
+    color: $grey-color;
+
+    &::after {
+      content: "";
+       margin: 0 5px 7px 5px;
+        width: 100%;
+        background: url("../images/dotted.svg") left bottom repeat-x;
+    }
+  }
+
+  &__value-two {
+    flex-shrink: 0;
+    width: 216px;
+    font-size: 14px;
+    line-height: 25.2px;
+  }
+}
